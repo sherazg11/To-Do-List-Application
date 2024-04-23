@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Your Action's Output</title>
+    </head>
+    <body style="text-align: center;">
+        <p>{{ select }}</p>
+        
+            {% if select == "add" %}
+            <form action="http://localhost:5000/userAction" method="post">
+                <input type="text" name="count" placeholder="Enter Task Number">
+                <input type="text" name="Newitem" placeholder="Start Typing your note">
+                <input type="submit" value="ADD" name = "select">
+            </form>
+            {% endif %}
+
+            {% if select == "remove" %}
+            <form action="http://localhost:5000/userAction" method="post">
+                <p>Which Item Do You Want to Remove?</p>
+                <input type="text" name="count" placeholder="Enter The Item Number">
+                <input type="submit" value="YES" name = "select">
+            </form>
+            {% endif %}
+
+            {% if select == "update" %}
+                <form action="http://localhost:5000/userAction" method="post">
+                    <input type="text" name="count" placeholder="Which task Number You Want to Change?">
+                    <input type="text" name="Newitem" placeholder="Enter New Task">
+                    <input type="submit" value="update" name="select">
+                </form>
+            {% endif %}
+
+            {% if select == "view" %}
+                <form action="http://localhost:5000/userAction"  method="post">
+                    <input type="submit" value="view" name="select">
+                    {% for row in rows %}
+                        <p>{{ rows["items"] }}</p>
+                    {% endfor %}
+                    {% endif %}
+                </form>
+
+            
+        </form>
+    </body>
+</html>

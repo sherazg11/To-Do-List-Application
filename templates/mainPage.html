@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <form action="http://localhost:5000/listOptions" method="post">
+                <h1>Hello {{ name }}</h1>
+                <p>You Can Now Proceed With Your List</p>
+                <h2>What do You Want to Do?</h2>
+                <select name="userAction" id="">
+                    <option value="add">Add</option>
+                    <option value="remove">Remove</option>
+                    <option value="update">Update</option>
+                    <option value="view">View</option>
+                </select>
+                <input type="submit" value="PROCEED">
+            </form>
+        </div>
+    </body>
+</html>

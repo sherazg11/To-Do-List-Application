@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Response From Server</title>
+    </head>
+    <body style="text-align: center;">
+    <h1>{{ msg }}</h1>
+    {% for task in rows %}
+            <li>{{ task[0] }} - {{ task[1] }}</li>
+        {% endfor %}
+
+    <a href="\mainPage">Back to Main Page</a>
+</body>
+</html>
